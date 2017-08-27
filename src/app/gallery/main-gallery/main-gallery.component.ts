@@ -10,6 +10,7 @@ import { Response } from '@angular/http';
 export class MainGalleryComponent implements OnInit {
 
   private shows: any[];
+  public selectedShow: {};
   constructor(private showService: ShowsService) { }
 
   ngOnInit() {
@@ -23,8 +24,14 @@ export class MainGalleryComponent implements OnInit {
     this.showService.getShowsInformation().subscribe((response: Response) => {
       this.shows = response.json();
       this.shows = this.shows.slice(1, 13);
-      console.log(this.shows);
     })
+  }
+
+  /**
+   * select show to detail
+   */
+  private detailShow(show: {}) {
+    this.selectedShow = show;
   }
 
 }

@@ -4,11 +4,15 @@
 	</div>
 	<div class="panel-body content-card">
 		<div class="image-show">
-			<img src="{{show.image.medium}}" alt="{{show.name}}" title="{{show.name}}" />
+			<img src="{{show.image.medium}}" alt="{{show.name}}" title="{{show.name}}" 
+			 	 data-toggle="modal" data-target="#complete-dialog"
+				 (click)="detail()" />
 		</div>
 		<div class="app-rating-custom">
-			<app-rating></app-rating>
+			<app-rating [stars]="show?.rating?.average / 2"></app-rating>
 		</div>
-		<button type="button" class="btn btn-default btn-raised">Detalle</button>
+		<button type="button" class="btn btn-default btn-raised" 
+				data-toggle="modal" data-target="#complete-dialog"
+				(click)="detail()">Detalle</button>
 	</div>
 </div>

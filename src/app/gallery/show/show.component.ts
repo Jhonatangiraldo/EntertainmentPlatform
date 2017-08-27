@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-show',
@@ -7,10 +7,18 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ShowComponent implements OnInit {
 
+  @Output() update: EventEmitter<{}> = new EventEmitter();
   @Input() show: {};
   constructor() { }
 
   ngOnInit() {
+  }
+
+  /**
+   * select show to detail
+   */
+  private detail() {
+    this.update.emit(this.show);
   }
 
 }

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {RatingModule} from "ngx-rating";
+import { Component, OnInit, Input } from '@angular/core';
+import { RatingModule } from "ngx-rating";
 
 @Component({
   selector: 'app-rating',
@@ -8,7 +8,7 @@ import {RatingModule} from "ngx-rating";
 })
 export class RatingComponent implements OnInit {
 
-  private stars: number = 3;
+  @Input() stars: number;
   constructor() { }
 
   ngOnInit() {
