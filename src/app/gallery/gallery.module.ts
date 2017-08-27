@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { ShowsService } from './services/shows/shows.service';
 import { MainGalleryComponent } from './main-gallery/main-gallery.component';
 import { NgModule } from '@angular/core';
@@ -7,10 +8,13 @@ import { ShowComponent } from './show/show.component';
 import { ShowDetailComponent } from './show-detail/show-detail.component';
 import { SearchComponent } from './search/search.component';
 import { RatingComponent } from './rating/rating.component';
+import { RatingModule } from "ngx-rating";
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    RatingModule,
   ],
   declarations: [
     ModalComponent, 
