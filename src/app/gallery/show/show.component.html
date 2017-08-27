@@ -1,11 +1,11 @@
-<div class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-collapse collapse navbar-inverse-collapse">
-      <form class="navbar-form navbar-left">
-       <div class="form-group">
-         <input #searchInput class="form-control col-md-8" placeholder="Search"  />
-       </div>
-     </form>
-   </div>
- </div>
+<div class="panel panel-inverse">
+	<div class="panel-heading">
+		<h4>{{show.name}}</h4>
+	</div>
+	<div class="panel-body content-card">
+		<img src="{{show.image.medium}}" alt="{{show.name}}" title="{{show.name}}" />
+		<app-rating></app-rating>
+		<button type="button" class="btn btn-default btn-raised">Detalle</button>
+		<!--<a href="javascript:void(0)" class="btn btn-raised btn-info" data-toggle="modal" data-target="#complete-dialog" (click)="clicked(movie)">Info</a>-->
+	</div>
 </div>

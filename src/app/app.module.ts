@@ -1,7 +1,7 @@
 import { GalleryModule } from './gallery/gallery.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -10,7 +10,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    GalleryModule
+    GalleryModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
