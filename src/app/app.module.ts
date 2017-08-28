@@ -1,3 +1,4 @@
+import { LoginModule } from './login/login.module';
 import { GalleryModule } from './gallery/gallery.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -13,7 +14,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     GalleryModule,
     HttpModule, 
-    FormsModule
+    FormsModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
