@@ -1,8 +1,5 @@
 .content-login {
-    width: 400px;
-    height: 395px;
-    text-align: center;
-    margin: 8% auto;
+    padding-bottom: 25px;
 }
 
 .header {
@@ -16,9 +13,4 @@
 
 .login-button {
     margin-top: 25px;
-}
-
-.create-user {
-    margin-top: 10px;
-    color: #3f51b5;
 }
