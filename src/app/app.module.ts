@@ -1,3 +1,5 @@
+import { AppRoutingModule } from './app.routh.module';
+import { AuthGuard } from './guard/auth.guard';
 import { ConfigurationService } from './configuration/configuration.service';
 import { LoginModule } from './login/login.module';
 import { GalleryModule } from './gallery/gallery.module';
@@ -7,7 +9,6 @@ import { HttpModule, RequestOptions } from '@angular/http';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { MainPresentationComponent } from './presentation/main-presentation/main-presentation.component';
-
 
 @NgModule({ 
   declarations: [
@@ -19,10 +20,12 @@ import { MainPresentationComponent } from './presentation/main-presentation/main
     GalleryModule,
     HttpModule, 
     FormsModule,
-    LoginModule
+    LoginModule,
+    AppRoutingModule
   ],
   providers: [
-    { provide: RequestOptions, useClass: ConfigurationService }
+    { provide: RequestOptions, useClass: ConfigurationService },
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

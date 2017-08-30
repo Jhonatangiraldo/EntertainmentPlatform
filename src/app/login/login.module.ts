@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './../app.routh.module';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -7,7 +8,8 @@ import { RegisterComponent } from './register/register.component';
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   declarations: [LoginComponent, RegisterComponent],
   exports: [LoginComponent, RegisterComponent]

@@ -12,6 +12,8 @@
               [ngClass]="{'form-control': true, 'password-verify': differentPass}">
     </div>
 		<button type="button" class="btn btn-default" (click)="create()">Create User</button>
-    <div class="label-information">Do you have an account ? <strong>Login.</strong></div>
+    <div class="label-information">Do you have an account ? 
+      <a [routerLink]="['/login']" ><strong>Login.</strong></a>
+    </div>
 	</div>
 </div>

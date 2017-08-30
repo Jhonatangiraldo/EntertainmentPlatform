@@ -10,6 +10,9 @@
 		<button type="button" class="btn btn-default btn-raised login-button" 
             data-toggle="modal" data-target="#complete-dialog"
             (click)="detail()">Login</button>
-    <div class="label-information">Don't have an account ? <strong>Create User.</strong></div>
+            
+    <div class="label-information">Don't have an account ? 
+      <a [routerLink]="['/register']" ><strong>Create User.</strong></a>
+    </div>
 	</div>
 </div>
