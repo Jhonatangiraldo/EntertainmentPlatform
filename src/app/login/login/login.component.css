@@ -14,3 +14,9 @@
 .login-button {
     margin-top: 25px;
 }
+
+.bad-login {
+    color: #d81616;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}

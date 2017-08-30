@@ -1,3 +1,4 @@
+import { LoginService } from './services/login.service';
 import { AppRoutingModule } from './../app.routh.module';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
@@ -12,6 +13,7 @@ import { RegisterComponent } from './register/register.component';
     AppRoutingModule
   ],
   declarations: [LoginComponent, RegisterComponent],
-  exports: [LoginComponent, RegisterComponent]
+  exports: [LoginComponent, RegisterComponent],
+  providers: [LoginService]
 })
 export class LoginModule { }
