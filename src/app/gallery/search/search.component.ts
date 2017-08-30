@@ -10,14 +10,20 @@ export class SearchComponent implements OnInit {
 
   @Output() update = new EventEmitter();
   public name: string;
+  public rating: number;
 
   ngOnInit(){
     this.name = '';
-		this.update.emit('');
+		this.update.emit({'type': 1, 'value': ''});
+    this.update.emit({'type': 2, 'value': ''});
 	}
 
   private updateName() {
-    this.update.emit(this.name);
+    this.update.emit({'type': 1, 'value': this.name});
+  }
+
+  private updateRating() {
+    this.update.emit({'type': 2, 'value': this.rating});
   }
 
 

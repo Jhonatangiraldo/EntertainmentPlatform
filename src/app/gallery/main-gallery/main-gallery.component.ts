@@ -13,6 +13,8 @@ export class MainGalleryComponent implements OnInit {
   private page: number;;
   private shows: any[];
   public selectedShow: {};
+  public nameShow: string;
+  public rating: number;
   constructor(private showService: ShowsService) { }
 
   ngOnInit() {
@@ -35,6 +37,14 @@ export class MainGalleryComponent implements OnInit {
    */
   private detailShow(show: {}) {
     this.selectedShow = show;
+  }
+
+  private updatePipe(event: any) {
+    if (event.type == 1) {
+        this.nameShow = event.value;
+    } else {
+        this.rating = event.value;
+    }
   }
 
 

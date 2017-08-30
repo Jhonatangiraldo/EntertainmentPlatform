@@ -11,6 +11,7 @@ import { RatingComponent } from './rating/rating.component';
 import { RatingModule } from "ngx-rating";
 import { NgxPaginationModule } from 'ngx-pagination';
 import { NamePipe } from './pipes/name.pipe';
+import { RatingPipe } from './pipes/rating.pipe';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { NamePipe } from './pipes/name.pipe';
     SearchComponent,
     MainGalleryComponent,
     RatingComponent,
-    NamePipe    
+    NamePipe,
+    RatingPipe    
   ],
   exports: [
     MainGalleryComponent

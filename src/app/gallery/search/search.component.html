@@ -5,8 +5,9 @@
        <div class="form-group">
          <input (input)="updateName()" [(ngModel)]="name"
                 class="form-control col-md-8" name="search" placeholder="Name"  />
-          <input (input)="updateName()" [(ngModel)]="name"
-                class="form-control col-md-8" name="search" placeholder="Rating"  />
+          <input (input)="updateRating()" (keyup)="updateRating()" type="number" 
+                 min="1" max="5" [(ngModel)]="rating"
+                class="form-control col-md-8" name="rating" placeholder="Min Rating"  />
        </div>
      </form>
    </div>
