@@ -1,14 +1,18 @@
+import { ConfigurationService } from './configuration/configuration.service';
 import { LoginModule } from './login/login.module';
 import { GalleryModule } from './gallery/gallery.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpModule, RequestOptions } from '@angular/http';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { MainPresentationComponent } from './presentation/main-presentation/main-presentation.component';
 
-@NgModule({
+
+@NgModule({ 
   declarations: [
-    AppComponent
+    AppComponent,
+    MainPresentationComponent
   ],
   imports: [
     BrowserModule,
@@ -17,7 +21,9 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     LoginModule
   ],
-  providers: [],
+  providers: [
+    { provide: RequestOptions, useClass: ConfigurationService }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

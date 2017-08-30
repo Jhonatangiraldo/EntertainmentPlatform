@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, RequestOptions, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+
+const SHOWSURL = 'http://localhost:8080/gallery';
 
 @Injectable()
 export class ShowsService {
@@ -11,7 +13,10 @@ export class ShowsService {
    * get the shows information
    */
   getShowsInformation(): Observable<any> {
-    return this.http.get('http://api.tvmaze.com/shows');
+    let headers = new Headers;
+    headers.append("token", localStorage.getItem('token'));
+    return this.http.get(SHOWSURL//,new RequestOptions({headers: headers})
+    );
   }
 
 }

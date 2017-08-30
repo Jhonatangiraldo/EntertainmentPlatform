@@ -7,6 +7,7 @@ import { Response } from '@angular/http';
   templateUrl: './main-gallery.component.html',
   styleUrls: ['./main-gallery.component.css']
 })
+
 export class MainGalleryComponent implements OnInit {
 
   private shows: any[];
