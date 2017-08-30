@@ -3,7 +3,10 @@
     <div class="navbar-collapse collapse navbar-inverse-collapse">
       <form class="navbar-form navbar-left">
        <div class="form-group">
-         <input #searchInput class="form-control col-md-8" placeholder="Search"  />
+         <input (input)="updateName()" [(ngModel)]="name"
+                class="form-control col-md-8" name="search" placeholder="Name"  />
+          <input (input)="updateName()" [(ngModel)]="name"
+                class="form-control col-md-8" name="search" placeholder="Rating"  />
        </div>
      </form>
    </div>

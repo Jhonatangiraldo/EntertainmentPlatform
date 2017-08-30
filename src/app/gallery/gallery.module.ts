@@ -9,12 +9,15 @@ import { ShowDetailComponent } from './show-detail/show-detail.component';
 import { SearchComponent } from './search/search.component';
 import { RatingComponent } from './rating/rating.component';
 import { RatingModule } from "ngx-rating";
+import { NgxPaginationModule } from 'ngx-pagination';
+import { NamePipe } from './pipes/name.pipe';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     RatingModule,
+    NgxPaginationModule
   ],
   declarations: [
     ModalComponent, 
@@ -22,7 +25,8 @@ import { RatingModule } from "ngx-rating";
     ShowDetailComponent, 
     SearchComponent,
     MainGalleryComponent,
-    RatingComponent    
+    RatingComponent,
+    NamePipe    
   ],
   exports: [
     MainGalleryComponent
